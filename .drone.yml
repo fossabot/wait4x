@@ -129,7 +129,9 @@ steps:
   - name: dockerhub-description
     image: peterevans/dockerhub-description:2
     commands:
+      - pwd
       - ls -la
+      - cd / && ls -la && entrypoint.sh
     environment:
       README_FILEPATH: './README.md'
       DOCKERHUB_REPOSITORY: 'atkrad/wait4x'
