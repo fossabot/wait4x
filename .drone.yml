@@ -128,6 +128,8 @@ steps:
 
   - name: dockerhub-description
     image: peterevans/dockerhub-description:2
+    commands:
+      - ls -la
     environment:
       README_FILEPATH: './README.md'
       DOCKERHUB_REPOSITORY: 'atkrad/wait4x'
